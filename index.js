@@ -36,6 +36,11 @@ const users = new Map();
 
 const router = new Router();
 
+router.get("/", async (ctx) => {
+  ctx.response.body = "Hello from ffiec-nic!";  
+});
+
+
 // Returns any songs in the collection
 router.get("/songs", async (ctx) => {
   const querySnapshot = await db.collection("songs").get();
