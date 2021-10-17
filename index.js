@@ -24,7 +24,7 @@ import {
 } from "https://deno.land/x/oak@v7.7.0/mod.ts";
 import { virtualStorage } from "https://deno.land/x/virtualstorage@0.1.0/middleware.ts";
 
-const firebaseConfig = JSON.parse(Deno.env.get("FIREBASE_CONFIG"));
+// const firebaseConfig = JSON.parse(Deno.env.get("FIREBASE_CONFIG"));
 const firebaseApp = firebase.initializeApp(firebaseConfig, "example");
 const auth = firebase.auth(firebaseApp);
 const db = firebase.firestore(firebaseApp);
